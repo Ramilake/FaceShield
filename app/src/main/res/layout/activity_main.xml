@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+<!--    android:background="@color/dark_grey"-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all"
+        tools:ignore="MissingPrefix">
+
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="#3F51B5"
+            android:text="Covid-19\nFace Touch Detection"
+            android:gravity="center_vertical|center"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/csvButton"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|right"
+            android:backgroundTint="#3F51B5"
+            android:onClick="onClick"
+            android:text="Toggle CSV"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/csvToggleText"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center|left"
+            android:background="#3F51B5"
+            android:text="CSV: Disabled"
+            android:textAlignment="center"
+            android:gravity="center_vertical|right"
+            android:textSize="10sp" />
+
+
+<!--        <Button-->
+<!--            android:id="@+id/exitButton"-->
+<!--            android:layout_gravity="bottom|right"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#3F51B5"-->
+<!--            android:onClick="onClick"-->
+<!--            android:text="Exit"-->
+<!--            android:textSize="10sp"/>-->
+        <Button
+            android:id="@+id/ringtoneButton"
+            android:layout_gravity="bottom|right"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:onClick="onClick"
+            android:text="RT: Disabled"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/markButton"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:backgroundTint="#3F51B5"
+            android:onClick="onClick"
+            android:text="Mark"
+            android:textSize="10sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/traintestButton"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="#3F51B5"
+        android:onClick="onClick"
+        android:text="Negative"
+        android:textSize="10sp" />
+</androidx.wear.widget.BoxInsetLayout>
